@@ -1,14 +1,17 @@
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
-    // Public variables to set speed, jump force, and sprint multiplier
+    // Player movement variables
     public float walkSpeed = 5f;
     public float sprintSpeed = 8f;
     public float jumpForce = 7f;
 
-    // Camera and input
-    public Transform cameraTransform;
+    // Camera follow variables
+    public Transform cameraTransform; // Reference to the camera
+    public Transform cameraFollowTarget; // Target for the camera to follow
+    public float cameraFollowSpeed = 5.0f;
 
     // Private variables
     private Rigidbody rb;
@@ -17,48 +20,53 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        // Ensure the Rigidbody has constraints to prevent tipping
+        rb.freezeRotation = true;
     }
 
     void Update()
     {
-        Move();
-        Jump();
+        HandleMovement();
+        HandleJump();
     }
 
-    private void Move()
+
+    private void HandleMovement()
     {
         // Get input for movement
         float horizontal = Input.GetAxis("Horizontal"); // A/D or Left/Right
         float vertical = Input.GetAxis("Vertical"); // W/S or Up/Down
 
         // Calculate direction relative to the camera
-        Vector3 moveDirection = cameraTransform.forward * vertical + cameraTransform.right * horizontal;
-        moveDirection.y = 0; // Keep the movement on the XZ plane
-        moveDirection.Normalize();
+        Vector3 direction = cameraTransform.forward * vertical + cameraTransform.right * horizontal;
+        direction.y = 0; // Keep movement on the XZ plane
+        direction.Normalize();
 
-        // Apply speed (walk or sprint)
+        // Determine speed (sprint or walk)
         float speed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
 
         // Move the player
-        Vector3 movement = moveDirection * speed * Time.deltaTime;
-        transform.position += movement;
-
-        // Rotate player to face movement direction (if moving)
-        if (moveDirection != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
-        }
+        Vector3 movement = direction * speed * Time.deltaTime;
+        rb.MovePosition(transform.position + movement);
     }
 
-    private void Jump()
+    private void HandleJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
-
     }
 
-}
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if grounded
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+}
