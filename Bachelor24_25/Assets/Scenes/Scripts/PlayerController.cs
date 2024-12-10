@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     // Player movement variables
@@ -12,6 +11,9 @@ public class PlayerController : MonoBehaviour
     public Transform cameraTransform; // Reference to the camera
     public Transform cameraFollowTarget; // Target for the camera to follow
     public float cameraFollowSpeed = 5.0f;
+
+    // Rotation variables
+    public float rotationSpeed = 10f;
 
     // Private variables
     private Rigidbody rb;
@@ -31,7 +33,6 @@ public class PlayerController : MonoBehaviour
         HandleJump();
     }
 
-
     private void HandleMovement()
     {
         // Get input for movement
@@ -42,6 +43,13 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = cameraTransform.forward * vertical + cameraTransform.right * horizontal;
         direction.y = 0; // Keep movement on the XZ plane
         direction.Normalize();
+
+        if (direction.magnitude > 0.1f)
+        {
+            // Rotate the player towards the movement direction
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
 
         // Determine speed (sprint or walk)
         float speed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
@@ -59,7 +67,6 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {
