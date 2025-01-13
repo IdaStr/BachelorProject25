@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -35,7 +34,7 @@ public class InventoryManager : MonoBehaviour
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("Item/ItemName").GetComponent<TMP_Text>();
+            var itemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
             var iitemIcon = obj.transform.Find("Item/ItemIcon").GetComponent<Image>();
 
 
