@@ -21,7 +21,7 @@ public class PickupItem : MonoBehaviour
         // Check if the player is in range and presses the E key
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            Pickup();
+            Pickup();  // Call the Pickup method
         }
     }
 
@@ -63,12 +63,19 @@ public class PickupItem : MonoBehaviour
         // Disable the item (or destroy it, depending on your requirements)
         gameObject.SetActive(false);
 
+        // Add the item to the inventory
+        InventoryManager.Instance.Add(GetComponent<ItemController>().Item);
+
         // Hide the prompt
         if (pickupPrompt != null)
         {
             pickupPrompt.enabled = false;
         }
+
+        // Update inventory UI
+        InventoryManager.Instance.ListItems();
     }
 }
+
 
 

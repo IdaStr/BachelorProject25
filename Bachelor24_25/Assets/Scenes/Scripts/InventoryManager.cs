@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
 
     public Transform ItemContent;
     public GameObject InventoryItem;
+    private GameObject somePrefab;
 
     private void Awake()
     {
@@ -31,24 +32,36 @@ public class InventoryManager : MonoBehaviour
 
     public void ListItems()
     {
-        //Clean content before open.
+        // Clean content before updating UI
         foreach (Transform item in ItemContent)
         {
-            Destroy(item.gameObject);
-
+            if (item != null) // Prevent destroying null objects
+                Destroy(item.gameObject);
         }
 
         foreach (var item in Items)
         {
+            if (InventoryItem == null)
+            {
+                Debug.LogError("InventoryItem prefab is missing!");
+                return;
+            }
+
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
-            var iitemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var itemName = obj.transform.Find("ItemName")?.GetComponent<TextMeshProUGUI>();
+            var itemIcon = obj.transform.Find("ItemIcon")?.GetComponent<Image>();
 
+            if (itemName != null)
+                itemName.text = item.itemName;
 
-            itemName.text = item.itemName;
-            iitemIcon.sprite = item.icon;
+            if (itemIcon != null)
+                itemIcon.sprite = item.icon;
         }
     }
+
+
 }
+   
+
 
 
