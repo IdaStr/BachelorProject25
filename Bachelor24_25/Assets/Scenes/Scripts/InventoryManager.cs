@@ -54,8 +54,9 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName")?.GetComponent<TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("ItemIcon")?.GetComponent<Image>();
-            //move it
-           
+            
+            RectTransform rt = obj.GetComponent<RectTransform>();
+            rt.localPosition = rt.localPosition + Vector3.right * rt.rect.width * count;
             
 
             if (itemName != null)
