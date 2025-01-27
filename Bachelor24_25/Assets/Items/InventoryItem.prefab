@@ -35,10 +35,10 @@ RectTransform:
   - {fileID: 5492052015041788191}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131.77957, y: 54.84057}
-  m_SizeDelta: {x: 109.8986, y: 96.0432}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 404, y: 54.84057}
+  m_SizeDelta: {x: 0, y: 96.0432}
   m_Pivot: {x: 0.41, y: 0.5}
 --- !u!222 &8982769275633725719
 CanvasRenderer:
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 175430936695888750}
   - component: {fileID: 3084998253560504171}
   m_Layer: 5
-  m_Name: TextMeshProGUI
+  m_Name: ItemName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: Fred
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -30,6 +30,9 @@ public class PickupItem : MonoBehaviour
         // Check if the colliding object is the player
         if (other.CompareTag("Player"))
         {
+
+            Debug.Log("trigger enter");
+
             isPlayerInRange = true;
 
             // Show the pickup prompt

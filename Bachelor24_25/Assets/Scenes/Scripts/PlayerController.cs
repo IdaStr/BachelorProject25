@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
         // Check if grounded
         if (collision.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("collision");
             isGrounded = true;
         }
     }
