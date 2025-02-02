@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +22,7 @@ public class InventoryManager : MonoBehaviour
     {
         Debug.Log(item.itemName + " added to Items list");
         Items.Add(item);
-        
+
     }
 
     public void Remove(Item item)
@@ -31,18 +30,18 @@ public class InventoryManager : MonoBehaviour
         Items.Remove(item);
 
     }
-    
+
     public void ListItems()
     {
-        int count = 0;    
+        int count = 0;
         // Clean content before updating UI
-        
+
         foreach (Transform item in ItemContent)
         {
             if (item != null) // Prevent destroying null objects
                 Destroy(item.gameObject);
         }
-        
+
         foreach (var item in Items)
         {
             if (InventoryItem == null)
@@ -54,10 +53,10 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName")?.GetComponent<TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("ItemIcon")?.GetComponent<Image>();
-            
+
             RectTransform rt = obj.GetComponent<RectTransform>();
             rt.localPosition = rt.localPosition + Vector3.right * rt.rect.width * count;
-            
+
 
             if (itemName != null)
             {
@@ -78,7 +77,7 @@ public class InventoryManager : MonoBehaviour
 
 
 }
-   
+
 
 
 
