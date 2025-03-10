@@ -1,4 +1,8 @@
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,19 +23,57 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded;
 
+    //FOR IDAS ANIMATION (STARTS).
+        [SerializeField] private Vector3 animatingMoves;
+        private Animator animator;
+    //IDAS ANIMATION STUFF ENDS HERE
+
+       
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         // Ensure the Rigidbody has constraints to prevent tipping
         rb.freezeRotation = true;
+
+        //FOR IDA ANIMATION (STARTS)
+        animator = GetComponent<Animator>();
+        //IDAS ANIMATION STUFF ENDS HERE
+
     }
 
     void Update()
     {
         HandleMovement();
         HandleJump();
+
+
+}
+    //IDA ANIMATION STUFF. Delete this if I am messing up stuff! (STARTS)
+    private void AnimatedMovement()
+    {
+        {
+            //Animation
+            if (animatingMoves == Vector3.zero)
+            {
+                //Idle
+                animator.SetFloat("Speed", 0);
+
+            }
+            else if (!Input.GetKey(KeyCode.LeftShift))
+            {
+                //Walk
+                animator.SetFloat("Speed", 0.5f);
+            }
+            else
+            {
+                //Run
+                animator.SetFloat("Speed", 1);
+            }
+        }
     }
+    // IDA ANIMATION STUFF ENDS HERE
 
     private void HandleMovement()
     {
@@ -80,4 +122,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
-}
+        
+   
+
+
+
+    }
+  
