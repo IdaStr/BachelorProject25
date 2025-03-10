@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     //FOR IDAS ANIMATION (STARTS).
-        [SerializeField] private Vector3 animatingMoves;
+        [SerializeField] private Vector3 moveDirection;
         private Animator animator;
+        private CharacterController controller;
     //IDAS ANIMATION STUFF ENDS HERE
 
        
@@ -38,7 +39,9 @@ public class PlayerController : MonoBehaviour
         rb.freezeRotation = true;
 
         //FOR IDA ANIMATION (STARTS)
+        controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        
         //IDAS ANIMATION STUFF ENDS HERE
 
     }
@@ -55,21 +58,21 @@ public class PlayerController : MonoBehaviour
     {
         {
             //Animation
-            if (animatingMoves == Vector3.zero)
+            if (moveDirection == Vector3.zero)
             {
                 //Idle
                 animator.SetFloat("Speed", 0);
 
             }
-            else if (!Input.GetKey(KeyCode.LeftShift))
+            else if(!Input.GetKey(KeyCode.LeftShift))
             {
                 //Walk
-                animator.SetFloat("Speed", 0.5f);
+                animator.SetFloat("Speed", 1);
             }
             else
             {
                 //Run
-                animator.SetFloat("Speed", 1);
+                animator.SetFloat("Speed", 2);
             }
         }
     }
