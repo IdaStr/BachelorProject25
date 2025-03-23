@@ -27,9 +27,10 @@ public class PlayerController : MonoBehaviour
         [SerializeField] private Vector3 moveDirection;
         private Animator animator;
         private CharacterController controller;
+        private int _animIDSpeed;
     //IDAS ANIMATION STUFF ENDS HERE
 
-       
+
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
         //FOR IDA ANIMATION (STARTS)
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-        
+        _animIDSpeed = Animator.StringToHash("Speed");
         //IDAS ANIMATION STUFF ENDS HERE
 
     }
@@ -50,9 +51,9 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         HandleJump();
+        //AnimatedMovement();
 
-
-}
+    }
     //IDA ANIMATION STUFF. Delete this if I am messing up stuff! (STARTS)
     private void AnimatedMovement()
     {
@@ -61,18 +62,18 @@ public class PlayerController : MonoBehaviour
             if (moveDirection == Vector3.zero)
             {
                 //Idle
-                animator.SetFloat("Speed", 0);
+                animator.SetFloat(_animIDSpeed, 0);
 
             }
             else if(!Input.GetKey(KeyCode.LeftShift))
             {
                 //Walk
-                animator.SetFloat("Speed", 1);
+                animator.SetFloat(_animIDSpeed, 7);
             }
             else
             {
                 //Run
-                animator.SetFloat("Speed", 2);
+                animator.SetFloat(_animIDSpeed, 3);
             }
         }
     }
@@ -104,6 +105,24 @@ public class PlayerController : MonoBehaviour
 
         transform.position = transform.position + movement;
 
+
+        if (direction == Vector3.zero)
+        {
+            //Idle
+            animator.SetFloat(_animIDSpeed, 1);
+
+        }
+        else if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            //Walk
+            animator.SetFloat(_animIDSpeed, 3);
+        }
+        else
+        {
+            //Run
+            animator.SetFloat(_animIDSpeed, 7);
+        }
+        print(direction);
         //rb.MovePosition(transform.position + movement);
     }
 
