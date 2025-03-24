@@ -6,7 +6,7 @@ public class PickupItem : MonoBehaviour
     // UI Text element for the popup
     public Text pickupPrompt;
     private bool isPlayerInRange = false;
-
+  
     void Start()
     {
         // Ensure the prompt is initially hidden
@@ -23,6 +23,8 @@ public class PickupItem : MonoBehaviour
         {
             Pickup();  // Call the Pickup method
         }
+
+        
     }
 
     void OnTriggerEnter(Collider other)

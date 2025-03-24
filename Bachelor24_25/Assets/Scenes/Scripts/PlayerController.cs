@@ -53,6 +53,20 @@ public class PlayerController : MonoBehaviour
         HandleJump();
         //AnimatedMovement();
 
+        //Ida animation stuff. Delete if it breaks anything
+        
+        {
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                animator.SetBool("InteractionAnim", true);
+            }
+            else if (Input.GetKeyUp(KeyCode.E)) 
+            {
+                animator.SetBool("InteractionAnim", false);
+            }
+        }
+        //Ida animation stuff ENDS
+
     }
     //IDA ANIMATION STUFF. Delete this if I am messing up stuff! (STARTS)
     private void AnimatedMovement()
@@ -76,6 +90,8 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat(_animIDSpeed, 3);
             }
         }
+
+        
     }
     // IDA ANIMATION STUFF ENDS HERE
 
