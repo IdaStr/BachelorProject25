@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("InteractionAnim", true);
             }
-            else if (Input.GetKeyUp(KeyCode.E)) 
+            else 
             {
                 animator.SetBool("InteractionAnim", false);
             }
