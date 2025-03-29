@@ -23,7 +23,7 @@ public class MailBoxQuest : MonoBehaviour
     private void Update()
     {
        
-        if(MailboxExclamation!= null) 
+        if(MailboxExclamation != null) 
         {
             MailboxExclamation.transform.LookAt(Camera.main.transform.position);
             MailboxExclamation.transform.Rotate(0, 180, 0);
@@ -49,7 +49,7 @@ public class MailBoxQuest : MonoBehaviour
     { 
         if (!hasInteracted) 
         { 
-          InteractionKEY.SetActive(true);
+            InteractionKEY.SetActive(true);
             QuestRequest.SetActive(true);
             MailboxExclamation.SetActive(false);
 
@@ -87,6 +87,8 @@ public class MailBoxQuest : MonoBehaviour
             MailboxExclamation.SetActive(true);
            
         }
+
+        InteractionKEY.SetActive(false);
 
         Debug.Log("Player has fucked off out of zone.");
     }
