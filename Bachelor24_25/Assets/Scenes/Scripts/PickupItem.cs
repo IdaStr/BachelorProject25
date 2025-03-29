@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.ProBuilder.MeshOperations;
 using UnityEngine.UI;
 
 public class PickupItem : MonoBehaviour
@@ -6,6 +7,7 @@ public class PickupItem : MonoBehaviour
     // UI Text element for the popup
     public Text pickupPrompt;
     private bool isPlayerInRange = false;
+ 
   
     void Start()
     {
@@ -61,7 +63,11 @@ public class PickupItem : MonoBehaviour
     }
 
     void Pickup()
-    {
+    {   //ida stuff remove if problem
+       
+
+        //ida stuff ends
+
         // Logic for picking up the item
         Debug.Log("Item picked up!");
 
