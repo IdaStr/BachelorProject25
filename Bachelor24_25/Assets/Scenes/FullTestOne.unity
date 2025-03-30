@@ -3564,6 +3564,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b08b13973d7014ba900cd51b4fb167, type: 3}
+--- !u!1 &782826153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
+  m_PrefabInstance: {fileID: 1062234031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &784728821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4861,7 +4866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       propertyPath: m_Name
-      value: TrashBag1LP
+      value: Trash
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     - target: {fileID: 8777561750183122415, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4871,6 +4880,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616063146}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616063145}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616063147}
     - targetCorrespondingSourceObject: {fileID: 2700526778148424062, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 42801343}
@@ -7294,6 +7312,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
   m_PrefabInstance: {fileID: 1062234031}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1616063145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782826153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.022254819, y: 0.03472187, z: 0.040238746}
+  m_Center: {x: 0.0016900932, y: 0.0037626743, z: 0.010633473}
+--- !u!114 &1616063146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782826153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d47c92d93076f4e8a44a63aea12a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTag: Trash
+--- !u!114 &1616063147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782826153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23064a576747004bba5e03433f08757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupPrompt: {fileID: 0}
 --- !u!1 &1621066219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7569,7 +7634,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 73be671369acfb941aa441aaf77db87a, type: 2}
     - target: {fileID: 919132149155446097, guid: 5c2b1052ab1f3fc49abdd5706f261e0e, type: 3}
       propertyPath: m_Name
-      value: TrashBag2LP
+      value: Trash1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c2b1052ab1f3fc49abdd5706f261e0e, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8722,7 +8791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c427f5b227da636419212a1addb54166, type: 3}
       propertyPath: m_Name
-      value: TrashBag3LP
+      value: Trash2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c427f5b227da636419212a1addb54166, type: 3}
+      propertyPath: m_TagString
+      value: Trash
       objectReference: {fileID: 0}
     - target: {fileID: 7148767484563370092, guid: c427f5b227da636419212a1addb54166, type: 3}
       propertyPath: m_Materials.Array.data[0]

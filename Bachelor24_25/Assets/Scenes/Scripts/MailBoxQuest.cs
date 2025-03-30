@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MailBoxQuest : MonoBehaviour
@@ -9,21 +7,21 @@ public class MailBoxQuest : MonoBehaviour
     public GameObject InteractionKEY;
     public GameObject QuestRequest;
 
-    
+
     private bool hasInteracted;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     private void Update()
     {
-       
-        if(MailboxExclamation != null) 
+
+        if (MailboxExclamation != null)
         {
             MailboxExclamation.transform.LookAt(Camera.main.transform.position);
             MailboxExclamation.transform.Rotate(0, 180, 0);
@@ -37,7 +35,7 @@ public class MailBoxQuest : MonoBehaviour
             {
                 Interact();
             }
-            if (Input.GetKeyDown(KeyCode.F)) 
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 InteractionKEY.SetActive(false);
             }
@@ -45,10 +43,10 @@ public class MailBoxQuest : MonoBehaviour
 
     }
 
-    public void Interact() 
-    { 
-        if (!hasInteracted) 
-        { 
+    public void Interact()
+    {
+        if (!hasInteracted)
+        {
             InteractionKEY.SetActive(true);
             QuestRequest.SetActive(true);
             MailboxExclamation.SetActive(false);
@@ -58,19 +56,19 @@ public class MailBoxQuest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             InteractionKEY.SetActive(true);
 
             //if (!hasInteracted)
-           // {
-              //  MailboxExclamation.SetActive(true);
+            // {
+            //  MailboxExclamation.SetActive(true);
             //}
-           
-           // else if (!hasInteracted)
-           // {
-             //   MailboxExclamation.SetActive(false);
-          //  }
+
+            // else if (!hasInteracted)
+            // {
+            //   MailboxExclamation.SetActive(false);
+            //  }
 
 
             Debug.Log("Player has entered zone.");
@@ -83,9 +81,9 @@ public class MailBoxQuest : MonoBehaviour
     {
         if (other.CompareTag("Player") && hasInteracted)
         {
-    
+
             MailboxExclamation.SetActive(true);
-           
+
         }
 
         InteractionKEY.SetActive(false);

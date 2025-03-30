@@ -1,8 +1,4 @@
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,10 +20,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     //FOR IDAS ANIMATION (STARTS).
-        [SerializeField] private Vector3 moveDirection;
-        private Animator animator;
-        private CharacterController controller;
-        private int _animIDSpeed;
+    [SerializeField] private Vector3 moveDirection;
+    private Animator animator;
+    private CharacterController controller;
+    private int _animIDSpeed;
     //IDAS ANIMATION STUFF ENDS HERE
 
 
@@ -54,13 +50,13 @@ public class PlayerController : MonoBehaviour
         //AnimatedMovement();
 
         //Ida animation stuff. Delete if it breaks anything
-        
+
         {
             if (Input.GetKeyUp(KeyCode.E))
             {
                 animator.SetBool("InteractionAnim", true);
             }
-            else 
+            else
             {
                 animator.SetBool("InteractionAnim", false);
             }
@@ -79,7 +75,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat(_animIDSpeed, 0);
 
             }
-            else if(!Input.GetKey(KeyCode.LeftShift))
+            else if (!Input.GetKey(KeyCode.LeftShift))
             {
                 //Walk
                 animator.SetFloat(_animIDSpeed, 7);
@@ -91,7 +87,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        
+
     }
     // IDA ANIMATION STUFF ENDS HERE
 
@@ -160,10 +156,10 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
-        
-   
 
 
 
-    }
-  
+
+
+}
+

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FurnitureScript : MonoBehaviour
@@ -38,16 +36,16 @@ public class FurnitureScript : MonoBehaviour
 
     }
 
-        public void Interact()
+    public void Interact()
+    {
+        if (!hasInteracted)
         {
-            if (!hasInteracted)
-            {
             OpenOrderKey.SetActive(true);
             OrderBackground.SetActive(true);
             FurnitureOrderExlamation.SetActive(false);
-            }
-
         }
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1,8 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -37,7 +36,7 @@ public class ProgressBar : MonoBehaviour
 
     public void SetProgress(float Progress, float Speed)
     {
-        if(Progress <0 || Progress > 1)
+        if (Progress < 0 || Progress > 1)
         {
             Debug.LogWarning($"Invalid progress passed, expected value is between 0 and 1. Got {Progress}. Clamping");
             Progress = Mathf.Clamp01(Progress);
