@@ -28,7 +28,7 @@ public class ItemInteraction : MonoBehaviour
     // Handle collision to detect if the player is near an item
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Item")) // Only interact with objects tagged as "Item"
+        if (other.CompareTag("Trash")) // Only interact with objects tagged as "Item"
         {
             isInRange = true;
             currentItem = other.gameObject; // Store the item the player is near
@@ -38,7 +38,7 @@ public class ItemInteraction : MonoBehaviour
     // Handle leaving the trigger area
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Item"))
+        if (other.CompareTag("Trash"))
         {
             isInRange = false;
             currentItem = null; // Reset when the player leaves the area
