@@ -8,6 +8,8 @@ public class FurnitureScript : MonoBehaviour
     public GameObject OpenOrderKey;
     public GameObject FurnitureOrderExlamation;
     public GameObject OrderBackground;
+    public GameObject AllFurniture;
+
     //public GameObject FurnitureItems;
 
     private bool hasInteracted;
@@ -45,6 +47,7 @@ public class FurnitureScript : MonoBehaviour
             OpenOrderKey.SetActive(true);
             OrderBackground.SetActive(true);
             FurnitureOrderExlamation.SetActive(false);
+
         }
 
     }
