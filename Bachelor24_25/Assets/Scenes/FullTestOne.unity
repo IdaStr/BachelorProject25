@@ -2980,9 +2980,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 586593899}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 586593898}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       insertIndex: -1
@@ -3408,19 +3405,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.022254819, y: 0.03472187, z: 0.040238746}
   m_Center: {x: 0.0016900932, y: 0.0037626743, z: 0.010633473}
---- !u!114 &586593899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586593895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d47c92d93076f4e8a44a63aea12a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemTag: Trash
 --- !u!1 &604696860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3384164312123272755, guid: bc7be5e34ac05a342b8956fc6fb5b273, type: 3}
@@ -5721,9 +5705,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1616063146}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b5bac28a4acbaa8488a5457ad53ff6b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1616063145}
@@ -8442,19 +8423,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.022254819, y: 0.03472187, z: 0.040238746}
   m_Center: {x: 0.0016900932, y: 0.0037626743, z: 0.010633473}
---- !u!114 &1616063146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782826153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d47c92d93076f4e8a44a63aea12a5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemTag: Trash
 --- !u!114 &1616063147
 MonoBehaviour:
   m_ObjectHideFlags: 0

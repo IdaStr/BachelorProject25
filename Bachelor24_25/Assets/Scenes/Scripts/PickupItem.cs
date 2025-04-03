@@ -24,6 +24,7 @@ public class PickupItem : MonoBehaviour
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
             Pickup();  // Call the Pickup method
+
         }
 
 
@@ -75,7 +76,11 @@ public class PickupItem : MonoBehaviour
         gameObject.SetActive(false);
 
         // Add the item to the inventory
-        InventoryManager.Instance.Add(GetComponent<ItemController>().Item);
+        if (!gameObject.CompareTag("Trash"))
+        {
+         InventoryManager.Instance.Add(GetComponent<ItemController>().Item);
+        }
+        
 
         // Hide the prompt
         if (pickupPrompt != null)
