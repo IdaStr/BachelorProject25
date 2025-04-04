@@ -47,6 +47,7 @@ public class FurnitureScript : MonoBehaviour
             OpenOrderKey.SetActive(true);
             OrderBackground.SetActive(true);
             FurnitureOrderExlamation.SetActive(false);
+            AllFurniture.SetActive(true);
 
         }
 
