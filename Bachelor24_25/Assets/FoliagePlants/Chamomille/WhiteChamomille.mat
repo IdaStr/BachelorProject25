@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PinkSmall
+  m_Name: WhiteChamomille
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 47c637959f761564b8fb7d59b7ff984e, type: 3}
+        m_Texture: {fileID: 2800000, guid: a89c03acd54aadf419afd771072c3873, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,11 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b2bd8d85b81082c4c8c59924b3afc447, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1f8cb0d7a39f2104982e9d2ee298069f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 2635de733e7ca4543922d03d4e8f28bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8556f6b79f3223c4cba934c283868caf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
