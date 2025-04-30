@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FurnitureScript : MonoBehaviour
 {
-
     public GameObject OpenOrderKey;
     public GameObject FurnitureOrderExlamation;
     public GameObject OrderBackground;
@@ -13,7 +12,6 @@ public class FurnitureScript : MonoBehaviour
     //public GameObject FurnitureItems;
 
     private bool hasInteracted;
-
 
     // Update is called once per frame
     private void Update()
@@ -37,7 +35,6 @@ public class FurnitureScript : MonoBehaviour
                 OpenOrderKey.SetActive(false);
             }
         }
-
     }
 
     public void Interact()
@@ -48,9 +45,7 @@ public class FurnitureScript : MonoBehaviour
             OrderBackground.SetActive(true);
             FurnitureOrderExlamation.SetActive(false);
             AllFurniture.SetActive(true);
-
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -58,9 +53,6 @@ public class FurnitureScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OpenOrderKey.SetActive(true);
-
-
-
 
             Debug.Log("Player has entered zone.");
         }
@@ -77,7 +69,7 @@ public class FurnitureScript : MonoBehaviour
 
         OpenOrderKey.SetActive(false);
 
-        Debug.Log("Player has fucked off out of zone.");
+        Debug.Log("Player has left zone.");
     }
 }
 
