@@ -11,6 +11,7 @@ public class MailBoxQuest : MonoBehaviour
 
 
     private bool hasInteracted;
+    private bool hasEnteredZone;
 
 
     // Start is called before the first frame update
@@ -30,7 +31,7 @@ public class MailBoxQuest : MonoBehaviour
             //makes the ! in the scene follow and be rotated towards the camera so its always visible to player.
         }
 
-        if (!hasInteracted)
+        if (!hasInteracted & hasEnteredZone)
         {
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -44,6 +45,12 @@ public class MailBoxQuest : MonoBehaviour
         }
 
     }
+
+    public void EnteredZone() 
+    { 
+    
+    }
+    
 
     public void Interact()
     {
@@ -61,6 +68,7 @@ public class MailBoxQuest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             InteractionKEY.SetActive(true);
+            hasEnteredZone = true;
 
             //if (!hasInteracted)
             // {
@@ -87,6 +95,7 @@ public class MailBoxQuest : MonoBehaviour
             MailboxExclamation.SetActive(true);
 
         }
+        hasEnteredZone = false;
 
         InteractionKEY.SetActive(false);
 

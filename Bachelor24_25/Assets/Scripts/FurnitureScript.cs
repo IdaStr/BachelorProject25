@@ -12,6 +12,7 @@ public class FurnitureScript : MonoBehaviour
     //public GameObject FurnitureItems;
 
     private bool hasInteracted;
+    private bool hasEnteredZone;
 
     // Update is called once per frame
     private void Update()
@@ -23,9 +24,9 @@ public class FurnitureScript : MonoBehaviour
             //makes the ! in the scene follow and be rotated towards the camera so its always visible to player.
         }
 
-        if (!hasInteracted)
+        if (!hasInteracted & hasEnteredZone)
         {
-
+          
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Interact();
@@ -34,6 +35,7 @@ public class FurnitureScript : MonoBehaviour
             {
                 OpenOrderKey.SetActive(false);
             }
+
         }
     }
 
@@ -48,11 +50,17 @@ public class FurnitureScript : MonoBehaviour
         }
     }
 
+    public void EnteredZone()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             OpenOrderKey.SetActive(true);
+            hasEnteredZone = true;
 
             Debug.Log("Player has entered zone.");
         }
@@ -64,8 +72,8 @@ public class FurnitureScript : MonoBehaviour
         {
 
             FurnitureOrderExlamation.SetActive(true);
-
         }
+        hasEnteredZone = false;
 
         OpenOrderKey.SetActive(false);
 
