@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private CharacterController controller;
     private int _animIDSpeed;
+    //private bool hasEnteredZone;
     //IDAS ANIMATION STUFF ENDS HERE
 
 
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         //IDAS ANIMATION STUFF ENDS HERE
 
     }
+    
 
     void Update()
     {
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
         //Ida animation stuff. Delete if it breaks anything
 
         {
+           
             if (Input.GetKeyUp(KeyCode.E))
             {
                 animator.SetBool("InteractionAnim", true);
