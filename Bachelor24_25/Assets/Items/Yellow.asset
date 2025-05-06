@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: CubeYellow
   value: 15
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  prefab: {fileID: 4196974013956863289, guid: d43aa1b6e4c6ac6479aab8396acd1edc, type: 3}
+  prefab: {fileID: 367708070879595575, guid: 0faf709da7428994b8028bb4682a376a, type: 3}

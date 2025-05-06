@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: CubePurple
   value: 5
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  prefab: {fileID: 1331518386957647740, guid: f30bec97fd2d62e47a7d69e37781d70c, type: 3}
+  prefab: {fileID: 2140384370078247202, guid: a4de5c4ccab31824b978f986dbb5b4dc, type: 3}

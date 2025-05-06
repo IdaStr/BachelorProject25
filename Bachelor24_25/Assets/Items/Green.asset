@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: CubeGreen
   value: 30
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  prefab: {fileID: 7521670827830936594, guid: 199ca854f2a38fa48bccd55a5e2606ec, type: 3}
+  prefab: {fileID: 6076585639243624614, guid: 556bbd7944f04ce438aa5e1d72e4b310, type: 3}

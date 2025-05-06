@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: CubeRed
   value: 20
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  prefab: {fileID: 6674652830163382430, guid: 076a854198bd3b64681fca1433d762f1, type: 3}
+  prefab: {fileID: 9188829484163796206, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
