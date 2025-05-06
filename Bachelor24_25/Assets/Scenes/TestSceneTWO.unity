@@ -61632,11 +61632,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 996097327408216157, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6768684
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 996097327408216157, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9352188
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 996097327408216157, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61673,6 +61673,10 @@ PrefabInstance:
     - target: {fileID: 9188829484163796206, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
       propertyPath: m_Name
       value: CouchWithPillows
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188829484163796206, guid: d524a3ad51809554a9abe3a309f8ebe4, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
