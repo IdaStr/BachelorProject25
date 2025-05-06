@@ -35,8 +35,16 @@ public class PlacementSystem : MonoBehaviour
                 if (hit.collider.CompareTag("Ground"))
                 {
                     // Place the item on the ground
-                    float itemHeight = itemToPlace.prefab.GetComponentInChildren<Renderer>().bounds.size.y;
+                    Renderer renderer = itemToPlace.prefab.GetComponentInChildren<Renderer>();
+                    if (renderer == null)
+                    {
+                        Debug.LogError("No Renderer found in prefab or its children!");
+                        return;
+                    }
+
+                    float itemHeight = renderer.bounds.size.y;
                     Vector3 placeOnGround = hit.point + Vector3.up * (itemHeight / 2f);
+
                     Instantiate(itemToPlace.prefab, placeOnGround, Quaternion.identity);
 
                     // Remove item from inventory and refresh the UI
