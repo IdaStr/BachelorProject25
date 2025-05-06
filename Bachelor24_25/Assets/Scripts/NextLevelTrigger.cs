@@ -15,12 +15,8 @@ public class NextLevelTrigger : MonoBehaviour
         {   if (other.tag == "Player")
 
                 Debug.Log("Player has entered next level zone");
-
-        }
-
-        {
             NextLevelEndCredits.SetActive(true);
-
         }
+
     }
 }

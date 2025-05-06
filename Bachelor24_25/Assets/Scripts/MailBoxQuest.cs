@@ -99,7 +99,7 @@ public class MailBoxQuest : MonoBehaviour
 
         InteractionKEY.SetActive(false);
 
-        Debug.Log("Player has fucked off out of zone.");
+        Debug.Log("Player has left zone.");
     }
 
 }
