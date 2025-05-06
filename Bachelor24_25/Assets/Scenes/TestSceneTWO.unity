@@ -11737,9 +11737,9 @@ MonoBehaviour:
   m_colorMode: 0
   m_fontColorGradient:
     topLeft: {r: 0.74509805, g: 0.11764706, b: 0.14901961, a: 1}
-    topRight: {r: 0.745283, g: 0.116011046, b: 0.14942366, a: 1}
-    bottomLeft: {r: 0.745283, g: 0.116011046, b: 0.14942366, a: 1}
-    bottomRight: {r: 0.745283, g: 0.116011046, b: 0.14942366, a: 1}
+    topRight: {r: 0.74509805, g: 0.11764706, b: 0.14901961, a: 1}
+    bottomLeft: {r: 0.74509805, g: 0.11764706, b: 0.14901961, a: 1}
+    bottomRight: {r: 0.74509805, g: 0.11764706, b: 0.14901961, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -13172,7 +13172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.0613, y: -252.4178}
+  m_AnchoredPosition: {x: -25.0613, y: -186}
   m_SizeDelta: {x: 451.8776, y: 138.8357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458085927
@@ -42309,7 +42309,7 @@ MonoBehaviour:
     forgot to clean?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
-  m_sharedMaterial: {fileID: 5058966660150576009, guid: fc5d2c2fb41d92d44ac7baf6b143d829, type: 2}
+  m_sharedMaterial: {fileID: -2800644339932477701, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42601,7 +42601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -67.24231, y: -496.1811}
+  m_AnchoredPosition: {x: -67.24231, y: -371}
   m_SizeDelta: {x: 345.5154, y: 136.3622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434367664
@@ -42755,8 +42755,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: W,A,S,D to move around. Shift to sprint. E to pick up items. 1-6 to place
-    furniture.
+  m_text: "W,A,S,D to move around. \nShift to sprint. \nE to pick up items. \n1-6
+    to place furniture."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
   m_sharedMaterial: {fileID: -2800644339932477701, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
@@ -42819,7 +42819,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 97.191895, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -47400,7 +47400,7 @@ MonoBehaviour:
   m_text: Huh, what cup?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
-  m_sharedMaterial: {fileID: 5058966660150576009, guid: fc5d2c2fb41d92d44ac7baf6b143d829, type: 2}
+  m_sharedMaterial: {fileID: -2800644339932477701, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -54227,7 +54227,7 @@ MonoBehaviour:
   m_text: Who cares, I'm ready!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
-  m_sharedMaterial: {fileID: 5058966660150576009, guid: fc5d2c2fb41d92d44ac7baf6b143d829, type: 2}
+  m_sharedMaterial: {fileID: -2800644339932477701, guid: 0c4f0eb98d3d8874fbd73468889ea0da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -58100,7 +58100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2056914918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60804,7 +60804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2122637062
 RectTransform:
   m_ObjectHideFlags: 0
