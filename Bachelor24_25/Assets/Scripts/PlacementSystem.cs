@@ -9,6 +9,10 @@ public class PlacementSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1)) PlaceItem("CubeBlue");
         if (Input.GetKeyDown(KeyCode.Alpha2)) PlaceItem("CubeYellow");
         if (Input.GetKeyDown(KeyCode.Alpha3)) PlaceItem("CubePurple");
+        if (Input.GetKeyDown(KeyCode.Alpha4)) PlaceItem("CubeRed");
+        if (Input.GetKeyDown(KeyCode.Alpha5)) PlaceItem("CubeOrange");
+        if (Input.GetKeyDown(KeyCode.Alpha6)) PlaceItem("CubeGreen");
+
     }
 
     void PlaceItem(string itemName)
