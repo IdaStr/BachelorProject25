@@ -8,6 +8,7 @@ public class MailBoxQuest : MonoBehaviour
     public GameObject MailboxExclamation;
     public GameObject InteractionKEY;
     public GameObject QuestRequest;
+    public GameObject ActivateSignpost;
 
 
     private bool hasInteracted;
@@ -42,6 +43,10 @@ public class MailBoxQuest : MonoBehaviour
             {
                 InteractionKEY.SetActive(false);
             }
+            if (Input.GetKeyDown(KeyCode.F)) 
+            {
+                ActivateSignpost.SetActive(true);
+            }
         }
 
     }
@@ -59,6 +64,7 @@ public class MailBoxQuest : MonoBehaviour
             InteractionKEY.SetActive(true);
             QuestRequest.SetActive(true);
             MailboxExclamation.SetActive(false);
+            ActivateSignpost.SetActive(false);
 
         }
     }

@@ -28,16 +28,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140384370078247202}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.82, y: 0.961, z: 0.04}
   m_LocalScale: {x: 0.8864122, y: 0.8864122, z: 0.8864122}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6968015564379990953}
   - {fileID: 9129260508280042211}
   - {fileID: 8445715083207364246}
   - {fileID: 2949214381557015869}
   - {fileID: 5496762017543467068}
-  - {fileID: 6968015564379990953}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7456679856819896806
@@ -347,7 +347,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -520500156840366853, guid: c2d1bdda89f133b48890ba2e0a73ecaf, type: 3}
 --- !u!4 &6968015564379990953 stripped
