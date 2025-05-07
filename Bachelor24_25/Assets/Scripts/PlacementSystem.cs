@@ -6,12 +6,12 @@ public class PlacementSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) PlaceItem("CubeBlue");
-        if (Input.GetKeyDown(KeyCode.Alpha2)) PlaceItem("CubeYellow");
-        if (Input.GetKeyDown(KeyCode.Alpha3)) PlaceItem("CubePurple");
-        if (Input.GetKeyDown(KeyCode.Alpha4)) PlaceItem("CubeRed");
-        if (Input.GetKeyDown(KeyCode.Alpha5)) PlaceItem("CubeOrange");
-        if (Input.GetKeyDown(KeyCode.Alpha6)) PlaceItem("CubeGreen");
+        if (Input.GetKeyDown(KeyCode.Alpha1)) PlaceItem("Crystal bowl"); 
+        if (Input.GetKeyDown(KeyCode.Alpha2)) PlaceItem("Candles");
+        if (Input.GetKeyDown(KeyCode.Alpha3)) PlaceItem("Flowerpot");
+        if (Input.GetKeyDown(KeyCode.Alpha4)) PlaceItem("Sofa");
+        if (Input.GetKeyDown(KeyCode.Alpha5)) PlaceItem("Table");
+        if (Input.GetKeyDown(KeyCode.Alpha6)) PlaceItem("Cactus");
 
     }
 
@@ -35,7 +35,7 @@ public class PlacementSystem : MonoBehaviour
                 if (hit.collider.CompareTag("Ground"))
                 {
                     // Place the item on the ground
-                    Renderer renderer = itemToPlace.prefab.GetComponentInChildren<Renderer>();
+                    /*Renderer renderer = itemToPlace.prefab.GetComponentInChildren<Renderer>();
                     if (renderer == null)
                     {
                         Debug.LogError("No Renderer found in prefab or its children!");
@@ -44,9 +44,11 @@ public class PlacementSystem : MonoBehaviour
 
                     float itemHeight = renderer.bounds.size.y;
                     Vector3 placeOnGround = hit.point + Vector3.up * (itemHeight / 2f);
+                    */
+                    Vector3 placeOnGround = hit.point + Vector3.up; //object must have pivot at floor
 
-                    Instantiate(itemToPlace.prefab, placeOnGround, Quaternion.identity);
-
+                    Instantiate(itemToPlace.prefab, hit.point, Quaternion.identity);
+                    print(hit.transform.gameObject.name);
                     // Remove item from inventory and refresh the UI
                     InventoryManager.Instance.Remove(itemToPlace);
                     InventoryManager.Instance.ListItems();
