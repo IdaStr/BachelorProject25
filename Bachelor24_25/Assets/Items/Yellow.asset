@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Yellow
   m_EditorClassIdentifier: 
   id: 3
-  itemName: CubeYellow
+  itemName: Candles
   value: 15
   icon: {fileID: 21300000, guid: c78461297cb3aae46a173c7f84638326, type: 3}
   prefab: {fileID: 367708070879595575, guid: 0faf709da7428994b8028bb4682a376a, type: 3}

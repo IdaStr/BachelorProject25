@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   id: 2
-  itemName: CubePurple
+  itemName: Flowerpot
   value: 5
   icon: {fileID: 21300000, guid: 5053c508e6305c54b94dc833b32e3a91, type: 3}
   prefab: {fileID: 2140384370078247202, guid: a4de5c4ccab31824b978f986dbb5b4dc, type: 3}

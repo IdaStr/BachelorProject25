@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: 
   id: 1
-  itemName: CubeBlue
+  itemName: Crystal bowl
   value: 10
   icon: {fileID: 21300000, guid: 61cc6048580a5fa4694c15845c502e37, type: 3}
   prefab: {fileID: 8371711327058811369, guid: c967563173b08fd46b05b70dc1b97923, type: 3}
