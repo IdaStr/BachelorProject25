@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandleMovement();
-        HandleJump();
+        //HandleJump();
         //AnimatedMovement();
 
         //Ida animation stuff. Delete if it breaks anything
@@ -145,14 +145,14 @@ public class PlayerController : MonoBehaviour
         //rb.MovePosition(transform.position + movement);
     }
 
-    private void HandleJump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
-    }
+    //private void HandleJump()
+    //{
+        //if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        //{
+          //  rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            //isGrounded = false;
+        //}
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
